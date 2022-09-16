@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Pig Dice Game</string>
+    <string name="welcome_subtitle">Welcome to the Pig Pen!</string>
+    <string name="play_button">Play</string>
+    <string name="start_button">Start</string>
+    <string name="return_button">Return</string>
+    <string name="rules_button">Rules</string>
+    <string name="restart_button">Restart</string>
+    <string name="roll_button">Roll Die</string>
+    <string name="hold_button">Hold</string>
+    <string name="end_game_button">End Game</string>
+    <string name="game_setup_header">Game Set-up</string>
+    <string name="name_hint">Enter a name</string>
+    <string name="P1">Player 1: </string>
+    <string name="P2">Player 2: </string>
+    <string-array name="rules">
+        <item>The name of the game is Pig.</item>
+        <item>To begin, input the players\' name and press Start.</item>
+        <item>Player 1 always starts first.</item>
+        <item>The player rolls the die repeatedly to accumulate round points.</item>
+        <item>If the player rolls a 1, they lose all of their round points on that turn and the turn will pass to the other player.</item>
+        <item>If the player holds, all round points they accumulated at that turn will be added to their total score.</item>
+        <item>If a player reaches 100 total points, they win and the game is over.</item>
+        <item>If the player somehow reaches 100 current round points then they automatically win, even without holding.</item>
+        <item>A player can skip their turn by pressing Hold even without rolling the die.</item>
+    </string-array>
+</resources>

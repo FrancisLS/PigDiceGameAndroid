@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDFE5"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/player_turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/die_picture"
+        android:layout_width="120dp"
+        android:layout_height="125dp"
+        android:src="@drawable/empty_die"
+        app:layout_constraintBottom_toTopOf="@+id/score_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player_turn_text" />
+
+    <TextView
+        android:id="@+id/score_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:onClick="onRollButton"
+        android:text="@string/roll_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hold_button"
+        app:layout_constraintEnd_toStartOf="@+id/hold_button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/hold_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onHoldButton"
+        android:text="@string/hold_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/restart_button"
+        app:layout_constraintEnd_toStartOf="@+id/restart_button"
+        app:layout_constraintStart_toEndOf="@+id/roll_button" />
+
+    <Button
+        android:id="@+id/restart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="155dp"
+        android:onClick="onRestartButton"
+        android:text="@string/restart_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/end_game_button"
+        app:layout_constraintStart_toEndOf="@+id/hold_button"
+        app:layout_constraintTop_toBottomOf="@+id/score_board" />
+
+    <Button
+        android:id="@+id/end_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="3dp"
+        android:onClick="onEndGameButton"
+        android:text="@string/end_game_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/restart_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/restart_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>
